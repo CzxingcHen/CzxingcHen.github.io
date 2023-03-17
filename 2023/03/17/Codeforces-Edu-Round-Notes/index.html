@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Codeforces-Edu-Round-Notes - XiaoZhi&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="XiaoZhi&#039;s Blog"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="XiaoZhi&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="退役老狗的 codeforces 摸鱼记。准备做做 Educational Round，一场做个五六题，试图维护一下捉襟见肘的代码能力，同时也拯救一下跌破下限的智商。 Educational Codeforces Round 144 (Rated for Div. 2)A注意到当 \( i \) 大于 \(30\) 时，产生的效果与 \(i\) 从 \(1\) 开始相同，所以原串是有循环节的。 m"><meta property="og:type" content="blog"><meta property="og:title" content="Codeforces-Edu-Round-Notes"><meta property="og:url" content="https://czxingchen.github.io/2023/03/17/Codeforces-Edu-Round-Notes/"><meta property="og:site_name" content="XiaoZhi&#039;s Blog"><meta property="og:description" content="退役老狗的 codeforces 摸鱼记。准备做做 Educational Round，一场做个五六题，试图维护一下捉襟见肘的代码能力，同时也拯救一下跌破下限的智商。 Educational Codeforces Round 144 (Rated for Div. 2)A注意到当 \( i \) 大于 \(30\) 时，产生的效果与 \(i\) 从 \(1\) 开始相同，所以原串是有循环节的。 m"><meta property="og:locale" content="en_US"><meta property="og:image" content="https://czxingchen.github.io/img/og_image.png"><meta property="article:published_time" content="2023-03-17T02:41:27.000Z"><meta property="article:modified_time" content="2023-03-17T03:21:47.248Z"><meta property="article:author" content="ZH Cai"><meta property="article:tag" content="笔记"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://czxingchen.github.io/2023/03/17/Codeforces-Edu-Round-Notes/"},"headline":"Codeforces-Edu-Round-Notes","image":["https://czxingchen.github.io/img/og_image.png"],"datePublished":"2023-03-17T02:41:27.000Z","dateModified":"2023-03-17T03:21:47.248Z","author":{"@type":"Person","name":"ZH Cai"},"publisher":{"@type":"Organization","name":"XiaoZhi's Blog","logo":{"@type":"ImageObject","url":"https://czxingchen.github.io/img/logo.svg"}},"description":"退役老狗的 codeforces 摸鱼记。准备做做 Educational Round，一场做个五六题，试图维护一下捉襟见肘的代码能力，同时也拯救一下跌破下限的智商。 Educational Codeforces Round 144 (Rated for Div. 2)A注意到当 \\( i \\) 大于 \\(30\\) 时，产生的效果与 \\(i\\) 从 \\(1\\) 开始相同，所以原串是有循环节的。 m"}</script><link rel="canonical" href="https://czxingchen.github.io/2023/03/17/Codeforces-Edu-Round-Notes/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+          Array
+              .from(document.querySelectorAll('.tab-content'))
+              .forEach($tab => {
+                  $tab.classList.add('is-hidden');
+              });
+          Array
+              .from(document.querySelectorAll('.tabs li'))
+              .forEach($tab => {
+                  $tab.classList.remove('is-active');
+              });
+          const $activeTab = document.querySelector(location.hash);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+          const $tabMenu = document.querySelector(`a[href="${location.hash}"]`);
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.1.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="XiaoZhi&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2023-03-17T02:41:27.000Z" title="2023/3/17 10:41:27">2023-03-17</time></span><span class="level-item">Updated&nbsp;<time dateTime="2023-03-17T03:21:47.248Z" title="2023/3/17 11:21:47">2023-03-17</time></span><span class="level-item">5 minutes read (About 724 words)</span></div></div><h1 class="title is-3 is-size-4-mobile">Codeforces-Edu-Round-Notes</h1><div class="content"><p>退役老狗的 codeforces 摸鱼记。准备做做 Educational Round，一场做个五六题，试图维护一下捉襟见肘的代码能力，同时也拯救一下跌破下限的智商。</p>
+<h2 id="Educational-Codeforces-Round-144-Rated-for-Div-2"><a href="#Educational-Codeforces-Round-144-Rated-for-Div-2" class="headerlink" title="Educational Codeforces Round 144 (Rated for Div. 2)"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1796">Educational Codeforces Round 144 (Rated for Div. 2)</a></h2><h3 id="A"><a href="#A" class="headerlink" title="A"></a>A</h3><p>注意到当 \( i \) 大于 \(30\) 时，产生的效果与 \(i\) 从 \(1\) 开始相同，所以原串是有循环节的。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1796/submission/197175613">my-impl</a></p>
+<h3 id="B"><a href="#B" class="headerlink" title="B"></a>B</h3><p>结论：最多使用两个 <code>*</code> 。</p>
+<p>做法：</p>
+<ul>
+<li>0 个 <code>*</code> : \(a\) 和 \(b\) 相同。</li>
+<li>1 个 <code>*</code> : 答案是 <code>x*</code> 或是 <code>*x</code> 的形式，只需要考虑 \(a\) 和 \(b\) 的首字母或是尾字母是否相同。</li>
+<li>2 个 <code>*</code> : 答案是 <code>*xy*</code> 的形式，如果答案是 <code>x*y*</code> 或是 <code>*x*y</code> 的形式，则可以等价替换为 <code>x*</code> 或 <code>*y</code> ，同理，使用 3 个或以上 <code>*</code> 一定不优。只需要考虑 \(a\) 和 \(b\) 中是否有两个连续字母相同。</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1796/submission/197176645">my-impl</a></p>
+<h3 id="C"><a href="#C" class="headerlink" title="C"></a>C</h3><p>眼瞎了，没看到取模。</p>
+<p>首先做这个最大\(size\) ，很好做，直接将 \(l\) 不断乘 \(2\) 直到超过 \(r\) 就可以得到最大的 \(size\) ，记为 \(n\) 。</p>
+<p>然后考虑方案数，首先枚举一个集合中最小的数 \(x\) ，那么需要满足 \(l \leq x, x\prod_{i = 1}^{n}d_i \leq r, \forall d_i \geq 2\)，所有 \(d_i\) 的取法就是方案数。</p>
+<p>可以设计递推计算这个方案数，设 \(f(x, n)\) 表示集合中最小的数为 \(1\)、当前集合中最大的数是 \(x\) 、集合大小为 \(n\) 的方案数，转移比较简单，那么此题答案就是：</p>
+<p>\[ \sum_{x = l}^{r}\sum_{i = 1}^{\lfloor \frac{r}{i} \rfloor} f(i, n) = \sum_{x = l}^{r} g(\lfloor \frac{r}{x} \rfloor, n)\]</p>
+<p>上式中，\(g(\ , n)\) 是 \(f(\ , n)\) 的前缀和。</p>
+<p>整除分块，时间似乎刚刚好。</p>
+<p>Tutorial 里面似乎有数学方法可以直接把这个方案数算出来。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1796/submission/197185923">my-impl</a></p>
+<h3 id="D"><a href="#D" class="headerlink" title="D"></a>D</h3><p>贪心。</p>
+<p>可以将题目中的操作看做将所有 \(a_i - x\) ，然后选择 \(k\) 个位置 \(+ 2x\) 。</p>
+<p>套路地将区间和拆成前缀和相减的形式，考虑枚举右端点对于答案的可能贡献。接下来按照 \(x\) 的正负讨论，如果 \(x &gt; 0\) ，那么希望尽可能将 \(k\) 个位置放在区间内，否则尽可能放在区间外。</p>
+<p>需要把一点点细节全部都写对，老年人为了复习线段树没有选择更快的做法。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1796/submission/197190312">my-impl</a></p>
+<h3 id="E"><a href="#E" class="headerlink" title="E"></a>E</h3><p>写半天没写出来，最后抄的题解，qaq。</p>
+<p>还是看 Tutorial 吧。🥹</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1796/submission/197465382">my-impl</a></p>
+<p>可能需要注意的是，当 <code>multiset</code> 为空的时候，<code>*s.begin()</code> 似乎是未定义行为，会返回一个奇妙的东西？</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>Codeforces-Edu-Round-Notes</p><p><a href="https://czxingchen.github.io/2023/03/17/Codeforces-Edu-Round-Notes/">https://czxingchen.github.io/2023/03/17/Codeforces-Edu-Round-Notes/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>Author</h6><p>ZH Cai</p></div></div><div class="level-item is-narrow"><div><h6>Posted on</h6><p>2023-03-17</p></div></div><div class="level-item is-narrow"><div><h6>Updated on</h6><p>2023-03-17</p></div></div><div class="level-item is-narrow"><div><h6>Licensed under</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2023/01/26/FLA22%E9%83%A8%E5%88%86%E4%BD%9C%E4%B8%9A/"><span class="level-item">FLA22部分作业</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">Comments</h3><div id="disqus_thread"><noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div><script>var disqus_config = function () {
+            this.page.url = 'https://czxingchen.github.io/2023/03/17/Codeforces-Edu-Round-Notes/';
+            this.page.identifier = '2023/03/17/Codeforces-Edu-Round-Notes/';
+        };
+        (function() {
+            var d = document, s = d.createElement('script');  
+            s.src = '//' + 'xiaozhisblog' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/shoko.jpg" alt="XiaoZhi"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">XiaoZhi</p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">3</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">0</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tag</p><a href="/tags"><p class="title">1</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/CzxingcHen" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="hhttps://github.com/CzxingcHen"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><!--!--><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-03-17T02:41:27.000Z">2023-03-17</time></p><p class="title"><a href="/2023/03/17/Codeforces-Edu-Round-Notes/">Codeforces-Edu-Round-Notes</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-01-26T06:45:24.000Z">2023-01-26</time></p><p class="title"><a href="/2023/01/26/FLA22%E9%83%A8%E5%88%86%E4%BD%9C%E4%B8%9A/">FLA22部分作业</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-20T13:20:38.277Z">2022-03-20</time></p><p class="title"><a href="/2022/03/20/hello-world/">Hello World</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2023/03/"><span class="level-start"><span class="level-item">March 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2023/01/"><span class="level-start"><span class="level-item">January 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/03/"><span class="level-start"><span class="level-item">March 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/%E7%AC%94%E8%AE%B0/"><span class="tag">笔记</span><span class="tag">2</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="XiaoZhi&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2023 ZH Cai</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          policy: "Cookie Policy",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/mhchem.min.js" defer></script><script>window.addEventListener("load", function() {
+            document.querySelectorAll('[role="article"] > .content').forEach(function(element) {
+                renderMathInElement(element);
+            });
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>
