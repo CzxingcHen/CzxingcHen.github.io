@@ -27,7 +27,7 @@
       switchTab();
       window.addEventListener('hashchange', switchTab, false);
   })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.1.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="XiaoZhi&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item is-active" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2023-03-17T02:41:27.000Z" title="2023/3/17 10:41:27">2023-03-17</time></span><span class="level-item">Updated&nbsp;<time dateTime="2023-03-17T03:21:47.248Z" title="2023/3/17 11:21:47">2023-03-17</time></span><span class="level-item">5 minutes read (About 724 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/03/17/Codeforces-Edu-Round-Notes/">Codeforces-Edu-Round-Notes</a></h1><div class="content"><p>退役老狗的 codeforces 摸鱼记。准备做做 Educational Round，一场做个五六题，试图维护一下捉襟见肘的代码能力，同时也拯救一下跌破下限的智商。</p>
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.1.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="XiaoZhi&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item is-active" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2023-03-17T02:41:27.000Z" title="2023/3/17 10:41:27">2023-03-17</time></span><span class="level-item">Updated&nbsp;<time dateTime="2023-03-20T06:04:27.555Z" title="2023/3/20 14:04:27">2023-03-20</time></span><span class="level-item">10 minutes read (About 1517 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/03/17/Codeforces-Edu-Round-Notes/">Codeforces-Edu-Round-Notes</a></h1><div class="content"><p>退役老狗的 codeforces 摸鱼记。准备做做 Educational Round，一场做个五六题，试图维护一下捉襟见肘的代码能力，同时也拯救一下跌破下限的智商。</p>
 <h2 id="Educational-Codeforces-Round-144-Rated-for-Div-2"><a href="#Educational-Codeforces-Round-144-Rated-for-Div-2" class="headerlink" title="Educational Codeforces Round 144 (Rated for Div. 2)"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1796">Educational Codeforces Round 144 (Rated for Div. 2)</a></h2><h3 id="A"><a href="#A" class="headerlink" title="A"></a>A</h3><p>注意到当 \( i \) 大于 \(30\) 时，产生的效果与 \(i\) 从 \(1\) 开始相同，所以原串是有循环节的。</p>
 <p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1796/submission/197175613">my-impl</a></p>
 <h3 id="B"><a href="#B" class="headerlink" title="B"></a>B</h3><p>结论：最多使用两个 <code>*</code> 。</p>
@@ -56,6 +56,36 @@
 <p>还是看 Tutorial 吧。🥹</p>
 <p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1796/submission/197465382">my-impl</a></p>
 <p>可能需要注意的是，当 <code>multiset</code> 为空的时候，<code>*s.begin()</code> 似乎是未定义行为，会返回一个奇妙的东西？</p>
+<h2 id="Educational-Codeforces-Round-143-Rated-for-Div-2"><a href="#Educational-Codeforces-Round-143-Rated-for-Div-2" class="headerlink" title="Educational Codeforces Round 143 (Rated for Div. 2)"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1795">Educational Codeforces Round 143 (Rated for Div. 2)</a></h2><h3 id="A-1"><a href="#A-1" class="headerlink" title="A"></a>A</h3><p>把两个序列拼在一起，中间切一刀，两边各自满足条件即可，暴力可过。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1795/submission/197852910">my-impl</a></p>
+<h3 id="B-1"><a href="#B-1" class="headerlink" title="B"></a>B</h3><p>考虑选择所有包含 \(k\) 的区间 \([l, r](l \leq k \leq r)\) 。</p>
+<p>所有不包含 \(k\) 的区间一定不优，而加入一个包含 \(k\) 的区间不会使 ideal 的点集变大，所以全部加入之后判断 \(k\) 是否满足 ideal 即可。暴力可过。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1795/submission/197853470">my-impl</a></p>
+<h3 id="C-1"><a href="#C-1" class="headerlink" title="C"></a>C</h3><p>对于每一个 \(a_i\) 在 \(b[i: n]\) 的区间上二分找到最后一个吃完的位置 \(p\) ，然后通过差分统计答案，\([i: p - 1]\) 的区间上每一个答案增加 \(b_j\) ，\(ans_p\) 增加剩下的价值。</p>
+<p>时间复杂度 \(O(n\log n)\)。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1795/submission/197854991">my-impl</a></p>
+<h3 id="D-1"><a href="#D-1" class="headerlink" title="D"></a>D</h3><p>因为所有 \(w_i \geq 0\) ，所以价值的代数和最大等价于扔掉最少的边。</p>
+<p>一个三角形的三个顶点只有两种涂色方法：</p>
+<ul>
+<li>三个点同色，这种情况下扔掉三条边，不优。</li>
+<li>两个点同色和最后一个点异色，这种情况下扔掉一条同色边，全部选择这种。</li>
+</ul>
+<p>因此，答案中有一个因子为 \(\binom{\frac{n}{3}}{\frac{n}{6}}\) ，上面是三角形数量，选出一半的三角形赋给两蓝一红的颜色，剩下的赋给两红一蓝的颜色。</p>
+<p>然后对于每个三角形的边权 \(a \leq b \leq c\) 分类讨论即可，考虑到所有的三角形涂色方案独立，答案为所有因子的乘积。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1795/submission/197857175">my-impl</a></p>
+<h3 id="E-1"><a href="#E-1" class="headerlink" title="E"></a>E</h3><p>一个很贴近真实算法的题，比较喜欢。</p>
+<p>考虑对于每一个 \(h_i\) 使用操作 2 能够解决全部所需的最小操作 1 的数量，很显然 \(i\) 这个位置是不应用操作 1 的，所以可以只考虑 \(i\) 的每一个前缀和后缀，方法类似。</p>
+<p>维护一个单增的单调队列，当遇到 \(h_i\) 时：</p>
+<ul>
+<li>将所有大于它的队尾元素出队，出队的过程中统计需要的操作 1 的数量，注意到假设队列中原有 \([5, 6, 8]\) 遇到 \(4\) ，其实会将原来的序列变成 \([1, 2, 3, 4]\) 的等差数列，因此将四个数压缩成一个节点放入单调队列中。</li>
+<li>另一个限制是当遇到比较小的 \(h_i\) 比如 \(2\) 时，实际上需要将 \(i - 1\) 以前的数统统使用操作 1 点死，这也是队头移动的条件。</li>
+</ul>
+<p>细节有一、、多</p>
+<p>时间复杂度 \(O(n)\) 。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1795/submission/197886845">my-impl</a></p>
+<h3 id="F"><a href="#F" class="headerlink" title="F"></a>F</h3><p>二分答案，考虑如何检验，令 1 为根，每一个黑点都尽可能向下（更深处）移动，如果无法往下移动，则向上移动到父亲尝试检验。移动到根或两个及以上黑点交汇则失败。</p>
+<p>时间复杂度 \(O(n\log n)\) 。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1795/submission/198314603">my-impl</a></p>
 </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2023-01-26T06:45:24.000Z" title="2023/1/26 14:45:24">2023-01-26</time></span><span class="level-item">Updated&nbsp;<time dateTime="2023-03-17T02:40:18.211Z" title="2023/3/17 10:40:18">2023-03-17</time></span><span class="level-item">21 minutes read (About 3075 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/01/26/FLA22%E9%83%A8%E5%88%86%E4%BD%9C%E4%B8%9A/">FLA22部分作业</a></h1><div class="content"><p>22 年“形式语言与自动机”课程中的部分作业整理，以我<del>喜欢</del>做错 / 不会做的证明题为主。</p>
 <h2 id="Assignment-1"><a href="#Assignment-1" class="headerlink" title="Assignment 1"></a>Assignment 1</h2><h3 id="Problem-7"><a href="#Problem-7" class="headerlink" title="Problem 7"></a>Problem 7</h3><p>Prove or disprove the following statement:</p>
 <ol>
