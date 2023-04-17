@@ -27,7 +27,7 @@
       switchTab();
       window.addEventListener('hashchange', switchTab, false);
   })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.1.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="XiaoZhi&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/tags">Tags</a></li><li class="is-active"><a href="#" aria-current="page">笔记</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2023-03-17T02:41:27.000Z" title="2023/3/17 10:41:27">2023-03-17</time></span><span class="level-item">Updated&nbsp;<time dateTime="2023-03-20T06:04:27.555Z" title="2023/3/20 14:04:27">2023-03-20</time></span><span class="level-item">10 minutes read (About 1517 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/03/17/Codeforces-Edu-Round-Notes/">Codeforces-Edu-Round-Notes</a></h1><div class="content"><p>退役老狗的 codeforces 摸鱼记。准备做做 Educational Round，一场做个五六题，试图维护一下捉襟见肘的代码能力，同时也拯救一下跌破下限的智商。</p>
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.1.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="XiaoZhi&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/tags">Tags</a></li><li class="is-active"><a href="#" aria-current="page">笔记</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2023-03-17T02:41:27.000Z" title="2023/3/17 10:41:27">2023-03-17</time></span><span class="level-item">Updated&nbsp;<time dateTime="2023-04-17T04:09:53.504Z" title="2023/4/17 12:09:53">2023-04-17</time></span><span class="level-item">18 minutes read (About 2696 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/03/17/Codeforces-Edu-Round-Notes/">Codeforces-Edu-Round-Notes</a></h1><div class="content"><p>退役老狗的 codeforces 摸鱼记。准备做做 Educational Round，一场做个五六题，试图维护一下捉襟见肘的代码能力，同时也拯救一下跌破下限的智商。</p>
 <h2 id="Educational-Codeforces-Round-144-Rated-for-Div-2"><a href="#Educational-Codeforces-Round-144-Rated-for-Div-2" class="headerlink" title="Educational Codeforces Round 144 (Rated for Div. 2)"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1796">Educational Codeforces Round 144 (Rated for Div. 2)</a></h2><h3 id="A"><a href="#A" class="headerlink" title="A"></a>A</h3><p>注意到当 \( i \) 大于 \(30\) 时，产生的效果与 \(i\) 从 \(1\) 开始相同，所以原串是有循环节的。</p>
 <p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1796/submission/197175613">my-impl</a></p>
 <h3 id="B"><a href="#B" class="headerlink" title="B"></a>B</h3><p>结论：最多使用两个 <code>*</code> 。</p>
@@ -42,7 +42,7 @@
 <p>首先做这个最大\(size\) ，很好做，直接将 \(l\) 不断乘 \(2\) 直到超过 \(r\) 就可以得到最大的 \(size\) ，记为 \(n\) 。</p>
 <p>然后考虑方案数，首先枚举一个集合中最小的数 \(x\) ，那么需要满足 \(l \leq x, x\prod_{i = 1}^{n}d_i \leq r, \forall d_i \geq 2\)，所有 \(d_i\) 的取法就是方案数。</p>
 <p>可以设计递推计算这个方案数，设 \(f(x, n)\) 表示集合中最小的数为 \(1\)、当前集合中最大的数是 \(x\) 、集合大小为 \(n\) 的方案数，转移比较简单，那么此题答案就是：</p>
-<p>\[ \sum_{x = l}^{r}\sum_{i = 1}^{\lfloor \frac{r}{i} \rfloor} f(i, n) = \sum_{x = l}^{r} g(\lfloor \frac{r}{x} \rfloor, n)\]</p>
+<p>\[ \sum<em>{x = l}^{r}\sum</em>{i = 1}^{\lfloor \frac{r}{i} \rfloor} f(i, n) = \sum_{x = l}^{r} g(\lfloor \frac{r}{x} \rfloor, n)\]</p>
 <p>上式中，\(g(\ , n)\) 是 \(f(\ , n)\) 的前缀和。</p>
 <p>整除分块，时间似乎刚刚好。</p>
 <p>Tutorial 里面似乎有数学方法可以直接把这个方案数算出来。</p>
@@ -58,7 +58,7 @@
 <p>可能需要注意的是，当 <code>multiset</code> 为空的时候，<code>*s.begin()</code> 似乎是未定义行为，会返回一个奇妙的东西？</p>
 <h2 id="Educational-Codeforces-Round-143-Rated-for-Div-2"><a href="#Educational-Codeforces-Round-143-Rated-for-Div-2" class="headerlink" title="Educational Codeforces Round 143 (Rated for Div. 2)"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1795">Educational Codeforces Round 143 (Rated for Div. 2)</a></h2><h3 id="A-1"><a href="#A-1" class="headerlink" title="A"></a>A</h3><p>把两个序列拼在一起，中间切一刀，两边各自满足条件即可，暴力可过。</p>
 <p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1795/submission/197852910">my-impl</a></p>
-<h3 id="B-1"><a href="#B-1" class="headerlink" title="B"></a>B</h3><p>考虑选择所有包含 \(k\) 的区间 \([l, r](l \leq k \leq r)\) 。</p>
+<h3 id="B-1"><a href="#B-1" class="headerlink" title="B"></a>B</h3><p>考虑选择所有包含 \(k\) 的区间 \(<a href="l \leq k \leq r">l, r</a>\) 。</p>
 <p>所有不包含 \(k\) 的区间一定不优，而加入一个包含 \(k\) 的区间不会使 ideal 的点集变大，所以全部加入之后判断 \(k\) 是否满足 ideal 即可。暴力可过。</p>
 <p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1795/submission/197853470">my-impl</a></p>
 <h3 id="C-1"><a href="#C-1" class="headerlink" title="C"></a>C</h3><p>对于每一个 \(a_i\) 在 \(b[i: n]\) 的区间上二分找到最后一个吃完的位置 \(p\) ，然后通过差分统计答案，\([i: p - 1]\) 的区间上每一个答案增加 \(b_j\) ，\(ans_p\) 增加剩下的价值。</p>
@@ -86,6 +86,50 @@
 <h3 id="F"><a href="#F" class="headerlink" title="F"></a>F</h3><p>二分答案，考虑如何检验，令 1 为根，每一个黑点都尽可能向下（更深处）移动，如果无法往下移动，则向上移动到父亲尝试检验。移动到根或两个及以上黑点交汇则失败。</p>
 <p>时间复杂度 \(O(n\log n)\) 。</p>
 <p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1795/submission/198314603">my-impl</a></p>
+<h2 id="Educational-Codeforces-Round-146-Rated-for-Div-2"><a href="#Educational-Codeforces-Round-146-Rated-for-Div-2" class="headerlink" title="Educational Codeforces Round 146 (Rated for Div. 2)"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1814">Educational Codeforces Round 146 (Rated for Div. 2)</a></h2><h3 id="A-2"><a href="#A-2" class="headerlink" title="A"></a>A</h3><p>按照 \(n\) 和 \(k\) 的奇偶性分类讨论：</p>
+<ul>
+<li>\(n\) 是偶数，可以直接令 \(y = 0\) ，\(x\) 一定有解。</li>
+<li>\(n\) 是奇数，若 \(k\) 是偶数，一定无解；否则因为 \(k \leq n\) ，只要让 \(n\) 减去若干个 \(2\) 一定可以到达 \(k\) 。</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1814/submission/202329845">my-impl</a></p>
+<h3 id="B-2"><a href="#B-2" class="headerlink" title="B"></a>B</h3><p>好题，不要把算法题当成数学题来做。</p>
+<p>先考虑只有一维的做法，一个直观的想法是先将 \(m\) 增大到 \(\sqrt{a}\) 左右，然后再走约 \(\sqrt{a}\) 步，这样最少。</p>
+<p>但是在两维的情况下，这个想法并不一定成立，参考 \(a = 8, b = 4\) 这组样例解释，一个较大的 \(m\) 可能会对于上面这个最小的性质带来一些破坏。</p>
+<p>考虑当 \(m\) 不超过 \(M\) 时所需的最少步数，答案为 \(M + \lceil \frac{a}{M} \rceil + \lceil \frac{b}{M} \rceil \) ，对于那些多出来的部分，只需要在 \(m\) 还没增大到 \(M\) 的时候先走即可。</p>
+<p>结合最开始的观察，发现当 \(M\) 很大的时候是无意义的，而 \(M\) 应该 \(&lt; \max(\sqrt{a}, \sqrt{b})\) 。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1814/submission/202332519">my-impl</a></p>
+<h3 id="C-2"><a href="#C-2" class="headerlink" title="C"></a>C</h3><p>先考虑只有一个 \(a\) 的情况，很显然是把 \(r\) 逆序排序，直接按顺序构造最小，证明可以参考排序不等式。</p>
+<p>那么如果有两个数组可以构造，只需要把 \([s_1, 2s_1, \ldots, ns_1, s_2, 2s_2, \ldots, ns_2]\) 排序，然后取前 \(n\) 项即可。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1814/submission/202334570">my-impl</a></p>
+<h3 id="D-2"><a href="#D-2" class="headerlink" title="D"></a>D</h3><p>发现答案具有单调性，即如果改变 \(x\) 个 \(d_i\) 能做到，那么改变更多个 \(d_i\) 也一定能做到。</p>
+<p>于是可以二分，这边考虑二分的是最多的不改变 \(d_i\) 的数量。原因是：设 \(p’\) 表示 \(p\) 从小到大排序的结果，那么不改变的这些点一定是 \(p’\) 中的一段连续区间。</p>
+<p>现在问题变成了有了一段连续区间 \(p’[l: r]\) ，如何检验外面的这些点改变 \(d_i\) 之后能不能满足极差 \(\geq k\) 的条件，可以把区间外的这些点分成两类：</p>
+<ul>
+<li>通过改变 \(d_i\) 能够放进 \([p’(l), p’(r)]\) 这个区间里面的点，这一部分点一定不会破坏目标性质</li>
+<li>通过改变 \(d_i\) 不能放进这个区间里面的点，这一部分点可能会放在区间的左边或者右边，针对这一部分点的检验变成了：每一个点有放在左边或是右边两种选项，是否存在一种选法使得极差 \(\geq k\) 这个条件成立。</li>
+</ul>
+<p>可以枚举这些点的左边的值，同时记录他们对应的右边的值，按照从小到大的顺序枚举这些点放在左边的值，每当端点右移时，相当于要把这个点放在右边，这时只需要维护延伸出的右端点最大值即可。</p>
+<p>我认为，最后一步这个算法还是有一定的价值的，并不是完全套路。</p>
+<p>时间复杂度可能是 \(O(n^2\log^2 n)\) ，但是不怎么满。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1814/submission/202342920">my-impl</a></p>
+<h3 id="E-2"><a href="#E-2" class="headerlink" title="E"></a>E</h3><p>有点没意思，搞了半天就是动态 dp 。</p>
+<p>结论是：一定可以把这个链条划分成若干个 \(2\) 个相邻点和 \(3\) 个相邻点的集合。</p>
+<p>证明可以分为两步：</p>
+<ol>
+<li>如果两个置换环之间存在交叉，一定不优，可以通过把交叉互换的方式减少开销。</li>
+<li>如果存在一个 \(&gt; 3\) 的置换环，那么可以通过拆分成若干个大小为 \(2\) 和 \(3\) 的置换环的组合更优。</li>
+</ol>
+<p>分析到了这里，dp 呼之欲出，设 \(f(i, 0 / 1)\) 表示到 \(i\) 这个点，选 / 不选 \(i\) 这个点的最小价值和，初值为 </p>
+<p>\[f(1, 0) = 0, f(1, 1) = \infty \]</p>
+<p>有转移，</p>
+<p>\[f(i, 1) = \min(f(i - 1, 0), f(i - 1, 1)) + a_{i - 1}\]</p>
+<p>\[f(i, 0) = f(i - 1, 1)\]</p>
+<p>套上动态 dp 那一套理论，先重新定义矩阵乘法：</p>
+<p>\[C = A \cdot B, c(i, j) = \min(\sum_{k = 1}^{n}a(i, k) + b(k, j))\] </p>
+<p>然后把转移写成矩阵乘法的形式，寄了 hexo 为什么连矩阵乘法都打不出来，看来还需要再调教一下这个博客。qaq</p>
+<p>最后用线段树维护矩阵即可。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1814/submission/202434721">my-impl</a></p>
+<p>接下来准备结合 THU 的机考题，对于目前的训练情况做一些调整。</p>
 </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2023-01-26T06:45:24.000Z" title="2023/1/26 14:45:24">2023-01-26</time></span><span class="level-item">Updated&nbsp;<time dateTime="2023-03-17T02:40:18.211Z" title="2023/3/17 10:40:18">2023-03-17</time></span><span class="level-item">21 minutes read (About 3075 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/01/26/FLA22%E9%83%A8%E5%88%86%E4%BD%9C%E4%B8%9A/">FLA22部分作业</a></h1><div class="content"><p>22 年“形式语言与自动机”课程中的部分作业整理，以我<del>喜欢</del>做错 / 不会做的证明题为主。</p>
 <h2 id="Assignment-1"><a href="#Assignment-1" class="headerlink" title="Assignment 1"></a>Assignment 1</h2><h3 id="Problem-7"><a href="#Problem-7" class="headerlink" title="Problem 7"></a>Problem 7</h3><p>Prove or disprove the following statement:</p>
 <ol>
@@ -105,11 +149,7 @@
 <p>此处可以利用 <strong>正则语言在交（差）操作下的封闭性</strong> ，由 \( A \cup B = L \) （其实是 \(B = L - A\)）知，若 \( B \) 正则，因为 \( L \) 正则，则 \( A \) 为正则语言，与 \( A \) 非正则的性质矛盾，因此可得 \( B \) 非正则。</p>
 <p>作业中并没有想到这一点，尝试利用了<strong>正则语言的泵引理</strong>，觉得有一点问题，但助教判定为正确，记录如下：</p>
 <article class="message is-info"><div class="message-header">
-<p>正则语言的泵引理</p>
-</div><div class="message-body">
-<p>若 \( B \) 为正则语言，则存在正整数 \(n\) （称之为 \(B\) 的泵引理常数），\( \forall s \in B, |s| \geq n \) ，则 \( s \) 可拆解为 \(xyz\) 的形式 （即 \(s = xyz\)），其中 \( |xy| \leq n, |y| &gt; 0, xy^iz \in B (i \in \lbrace 0, 1, 2, 3, \cdots \rbrace )\)</p>
-</div></article>
-
+<p>正则语言的泵引理<br></div><div class="message-body"><br>若 \( B \) 为正则语言，则存在正整数 \(n\) （称之为 \(B\) 的泵引理常数），\( \forall s \in B, |s| \geq n \) ，则 \( s \) 可拆解为 \(xyz\) 的形式 （即 \(s = xyz\)），其中 \( |xy| \leq n, |y| &gt; 0, xy^iz \in B (i \in \lbrace 0, 1, 2, 3, \cdots \rbrace )\)<br></div></article></p>
 <p>反证，假设 \( B \) 为正则语言，则有 \( B \) 对应的泵引理常数 \( n \) ，设 \( s \in B \) ，且 \( s \) 有一段长度为 \(n\) 的 \(0\) 前缀，即 \( s = 0^nw\) ，依然将 \(s\) 表示为 \(xyz\) 的形式，可设 \( y = 0^m(m &gt; 0)\) ，则 \( xyyz = 0^{n + m}w \) ，构造 \( w = 1^{n + m} \) ，即可推出 \( xyyz \notin B\) 。</p>
 <p>这个证明与一般的利用泵引理证明某个语言不属于正则语言的过程的最大的不同就是 \(s\) 除前缀之外的 \(w\) 部分是最后“拼凑”上去的。但从另一个角度来讲，哪怕是对于 \(0^n\) ，也足以应用泵引理，也就是说 \(m\) 的大小确定，所以在这里姑且认为 \(w\) 是确定存在且能被确定构造出来的 。</p>
 <p>解析里给了一个巧妙的构造：设 \( A = \lbrace 0^m1^n \mid m \geq n, m, n \in \mathbb{N} \rbrace, B = \lbrace 0^m1^n \mid m \leq n, m, n \in \mathbb{N} \rbrace, A \cup B = L(0^{*}1^{*})\) 。</p>
@@ -154,13 +194,12 @@
 <p>有一个典型的错解是构造 \(L\) 和 \(R\) 的并行 PDA（PDA in parallel），然后标记 \(L\) 和 \(R\) 对应的结束状态，如在 1. 中将 \([p, q] (p \in F(L), q \notin F(R))\) 标记为接受状态。这样的做法在 1. 中是没问题的，但是在 2. 中不成立。</p>
 <p>对于确定性的自动机，将所有的接受状态和非接受状态取反，得到的新自动机接受原语言的补集，但是这一点对于非确定性的自动机是不成立的。反例似乎遍地都是，比如我随手写了一个 \(L(ab^{*} + c^{*})\)。所以 \(\overline{L}\) 的自动机不能很好地构造出来。</p>
 <h4 id="3-True"><a href="#3-True" class="headerlink" title="3. True"></a>3. True</h4><h5 id="构造一：构造上下文无关文法"><a href="#构造一：构造上下文无关文法" class="headerlink" title="构造一：构造上下文无关文法"></a>构造一：构造上下文无关文法</h5><article class="message is-info"><div class="message-header">
-<p>Chomsky 范式</p>
-</div><div class="message-body">
-<p>一个文法满足 Chomsky 范式，当且仅当所有产生式都满足以下三者之一。</p>
+<p>Chomsky 范式<br></div><div class="message-body"><br>一个文法满足 Chomsky 范式，当且仅当所有产生式都满足以下三者之一。</p>
 <ul>
 <li>\( A \to BC \)</li>
 <li>\( A \to a \)</li>
-<li>\( S \to \epsilon \)</div></article></li>
+<li>\( S \to \epsilon \)</div></article>
+</li>
 </ul>
 <p>对于 \(L\) 的一个满足 Chomsky 范式的 CFG \(G = (V, T, P, S)\) ，构造一个新的 CFG \(G’ = (V’, T, P’, S’)\) 使 \(L(G’) = S(G)\)。</p>
 <ul>
@@ -176,11 +215,7 @@
 <p>那么这个 \(L’\) 里面有两个限制，看上去就不是上下文无关语言，又根据<strong>上下文无关语言和正则语言的交是上下文无关语言</strong>，若 \(H(L)\) 是上下文无关语言，则 \(H(L) \cap R\) 也一定是上下文无关语言。若能证明 \(L’\) 不是上下文无关语言，则 \(H(L)\) 就不是上下文无关语言，反例构造成立。</p>
 <p>可以使用<strong>上下文无关语言的泵引理</strong>很方便地证明。</p>
 <article class="message is-info"><div class="message-header">
-<p>上下文无关语言的泵引理</p>
-</div><div class="message-body">
-<p>若 \(L\) 为上下文无关语言，则存在泵引理常数 \(n\) ，\(\forall z \in L, |z| \geq n\) ，可以将 \(z\) 拆分为 \(uvwxy\) ，即 \(z = uvwxy\) ，其中 \(|vwx| \leq n, |vx| \geq 1\) ，\(\forall k \in \lbrace 0, 1, 2, \ldots \rbrace\)， \(uv^{k}wx^{k}y \in L\) 。</p>
-</div></article>
-
+<p>上下文无关语言的泵引理<br></div><div class="message-body"><br>若 \(L\) 为上下文无关语言，则存在泵引理常数 \(n\) ，\(\forall z \in L, |z| \geq n\) ，可以将 \(z\) 拆分为 \(uvwxy\) ，即 \(z = uvwxy\) ，其中 \(|vwx| \leq n, |vx| \geq 1\) ，\(\forall k \in \lbrace 0, 1, 2, \ldots \rbrace\)， \(uv^{k}wx^{k}y \in L\) 。<br></div></article></p>
 <p>在做题的过程中，发现了一件比较有意思看上去也比较有用的事情，就是在泵引理的应用过程中，可以不妨设 \(|u| &lt; n \)。因为若 \(|u| \geq n\) ，可以直接对 \(u\) （不断）应用泵引理直到 \(|u| &lt; n\) 。</p>
 <p>那么对于 \(L’\) ，可以直接取 \(z = b^{2n}c^{2n}d^{2n} = uvwxy \) ，不妨设 \(|u| &lt; n\)，那么 \(v, x\) 都是一段 \(b\) ，设 \(|vx| = l\) ，取 \(k = n\)，则 \(uv^kwx^ky = b^{2n + ln}c^{2n}d^{2n} \notin L’\) ，因此 \(L’\) 不是上下文无关语言。 </p>
 </div></article></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/shoko.jpg" alt="XiaoZhi"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">XiaoZhi</p><p class="is-size-6 is-block">窗外潇潇的雨幕里 飘然一曲诱我侧耳听</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Nanjing, China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">3</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">0</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tag</p><a href="/tags"><p class="title">1</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/CzxingcHen" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="hhttps://github.com/CzxingcHen"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><!--!--><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-03-17T02:41:27.000Z">2023-03-17</time></p><p class="title"><a href="/2023/03/17/Codeforces-Edu-Round-Notes/">Codeforces-Edu-Round-Notes</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-01-26T06:45:24.000Z">2023-01-26</time></p><p class="title"><a href="/2023/01/26/FLA22%E9%83%A8%E5%88%86%E4%BD%9C%E4%B8%9A/">FLA22部分作业</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-20T13:20:38.277Z">2022-03-20</time></p><p class="title"><a href="/2022/03/20/hello-world/">Hello World</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2023/03/"><span class="level-start"><span class="level-item">March 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2023/01/"><span class="level-start"><span class="level-item">January 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/03/"><span class="level-start"><span class="level-item">March 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/%E7%AC%94%E8%AE%B0/"><span class="tag">笔记</span><span class="tag">2</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="XiaoZhi&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2023 ZH Cai</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {

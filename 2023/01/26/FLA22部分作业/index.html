@@ -46,11 +46,7 @@
 <p>此处可以利用 <strong>正则语言在交（差）操作下的封闭性</strong> ，由 \( A \cup B = L \) （其实是 \(B = L - A\)）知，若 \( B \) 正则，因为 \( L \) 正则，则 \( A \) 为正则语言，与 \( A \) 非正则的性质矛盾，因此可得 \( B \) 非正则。</p>
 <p>作业中并没有想到这一点，尝试利用了<strong>正则语言的泵引理</strong>，觉得有一点问题，但助教判定为正确，记录如下：</p>
 <article class="message is-info"><div class="message-header">
-<p>正则语言的泵引理</p>
-</div><div class="message-body">
-<p>若 \( B \) 为正则语言，则存在正整数 \(n\) （称之为 \(B\) 的泵引理常数），\( \forall s \in B, |s| \geq n \) ，则 \( s \) 可拆解为 \(xyz\) 的形式 （即 \(s = xyz\)），其中 \( |xy| \leq n, |y| &gt; 0, xy^iz \in B (i \in \lbrace 0, 1, 2, 3, \cdots \rbrace )\)</p>
-</div></article>
-
+<p>正则语言的泵引理<br></div><div class="message-body"><br>若 \( B \) 为正则语言，则存在正整数 \(n\) （称之为 \(B\) 的泵引理常数），\( \forall s \in B, |s| \geq n \) ，则 \( s \) 可拆解为 \(xyz\) 的形式 （即 \(s = xyz\)），其中 \( |xy| \leq n, |y| &gt; 0, xy^iz \in B (i \in \lbrace 0, 1, 2, 3, \cdots \rbrace )\)<br></div></article></p>
 <p>反证，假设 \( B \) 为正则语言，则有 \( B \) 对应的泵引理常数 \( n \) ，设 \( s \in B \) ，且 \( s \) 有一段长度为 \(n\) 的 \(0\) 前缀，即 \( s = 0^nw\) ，依然将 \(s\) 表示为 \(xyz\) 的形式，可设 \( y = 0^m(m &gt; 0)\) ，则 \( xyyz = 0^{n + m}w \) ，构造 \( w = 1^{n + m} \) ，即可推出 \( xyyz \notin B\) 。</p>
 <p>这个证明与一般的利用泵引理证明某个语言不属于正则语言的过程的最大的不同就是 \(s\) 除前缀之外的 \(w\) 部分是最后“拼凑”上去的。但从另一个角度来讲，哪怕是对于 \(0^n\) ，也足以应用泵引理，也就是说 \(m\) 的大小确定，所以在这里姑且认为 \(w\) 是确定存在且能被确定构造出来的 。</p>
 <p>解析里给了一个巧妙的构造：设 \( A = \lbrace 0^m1^n \mid m \geq n, m, n \in \mathbb{N} \rbrace, B = \lbrace 0^m1^n \mid m \leq n, m, n \in \mathbb{N} \rbrace, A \cup B = L(0^{*}1^{*})\) 。</p>
@@ -95,13 +91,12 @@
 <p>有一个典型的错解是构造 \(L\) 和 \(R\) 的并行 PDA（PDA in parallel），然后标记 \(L\) 和 \(R\) 对应的结束状态，如在 1. 中将 \([p, q] (p \in F(L), q \notin F(R))\) 标记为接受状态。这样的做法在 1. 中是没问题的，但是在 2. 中不成立。</p>
 <p>对于确定性的自动机，将所有的接受状态和非接受状态取反，得到的新自动机接受原语言的补集，但是这一点对于非确定性的自动机是不成立的。反例似乎遍地都是，比如我随手写了一个 \(L(ab^{*} + c^{*})\)。所以 \(\overline{L}\) 的自动机不能很好地构造出来。</p>
 <h4 id="3-True"><a href="#3-True" class="headerlink" title="3. True"></a>3. True</h4><h5 id="构造一：构造上下文无关文法"><a href="#构造一：构造上下文无关文法" class="headerlink" title="构造一：构造上下文无关文法"></a>构造一：构造上下文无关文法</h5><article class="message is-info"><div class="message-header">
-<p>Chomsky 范式</p>
-</div><div class="message-body">
-<p>一个文法满足 Chomsky 范式，当且仅当所有产生式都满足以下三者之一。</p>
+<p>Chomsky 范式<br></div><div class="message-body"><br>一个文法满足 Chomsky 范式，当且仅当所有产生式都满足以下三者之一。</p>
 <ul>
 <li>\( A \to BC \)</li>
 <li>\( A \to a \)</li>
-<li>\( S \to \epsilon \)</div></article></li>
+<li>\( S \to \epsilon \)</div></article>
+</li>
 </ul>
 <p>对于 \(L\) 的一个满足 Chomsky 范式的 CFG \(G = (V, T, P, S)\) ，构造一个新的 CFG \(G’ = (V’, T, P’, S’)\) 使 \(L(G’) = S(G)\)。</p>
 <ul>
@@ -117,11 +112,7 @@
 <p>那么这个 \(L’\) 里面有两个限制，看上去就不是上下文无关语言，又根据<strong>上下文无关语言和正则语言的交是上下文无关语言</strong>，若 \(H(L)\) 是上下文无关语言，则 \(H(L) \cap R\) 也一定是上下文无关语言。若能证明 \(L’\) 不是上下文无关语言，则 \(H(L)\) 就不是上下文无关语言，反例构造成立。</p>
 <p>可以使用<strong>上下文无关语言的泵引理</strong>很方便地证明。</p>
 <article class="message is-info"><div class="message-header">
-<p>上下文无关语言的泵引理</p>
-</div><div class="message-body">
-<p>若 \(L\) 为上下文无关语言，则存在泵引理常数 \(n\) ，\(\forall z \in L, |z| \geq n\) ，可以将 \(z\) 拆分为 \(uvwxy\) ，即 \(z = uvwxy\) ，其中 \(|vwx| \leq n, |vx| \geq 1\) ，\(\forall k \in \lbrace 0, 1, 2, \ldots \rbrace\)， \(uv^{k}wx^{k}y \in L\) 。</p>
-</div></article>
-
+<p>上下文无关语言的泵引理<br></div><div class="message-body"><br>若 \(L\) 为上下文无关语言，则存在泵引理常数 \(n\) ，\(\forall z \in L, |z| \geq n\) ，可以将 \(z\) 拆分为 \(uvwxy\) ，即 \(z = uvwxy\) ，其中 \(|vwx| \leq n, |vx| \geq 1\) ，\(\forall k \in \lbrace 0, 1, 2, \ldots \rbrace\)， \(uv^{k}wx^{k}y \in L\) 。<br></div></article></p>
 <p>在做题的过程中，发现了一件比较有意思看上去也比较有用的事情，就是在泵引理的应用过程中，可以不妨设 \(|u| &lt; n \)。因为若 \(|u| \geq n\) ，可以直接对 \(u\) （不断）应用泵引理直到 \(|u| &lt; n\) 。</p>
 <p>那么对于 \(L’\) ，可以直接取 \(z = b^{2n}c^{2n}d^{2n} = uvwxy \) ，不妨设 \(|u| &lt; n\)，那么 \(v, x\) 都是一段 \(b\) ，设 \(|vx| = l\) ，取 \(k = n\)，则 \(uv^kwx^ky = b^{2n + ln}c^{2n}d^{2n} \notin L’\) ，因此 \(L’\) 不是上下文无关语言。 </p>
 </div><div class="article-licensing box"><div class="licensing-title"><p>FLA22部分作业</p><p><a href="https://czxingchen.github.io/2023/01/26/FLA22部分作业/">https://czxingchen.github.io/2023/01/26/FLA22部分作业/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>Author</h6><p>ZH Cai</p></div></div><div class="level-item is-narrow"><div><h6>Posted on</h6><p>2023-01-26</p></div></div><div class="level-item is-narrow"><div><h6>Updated on</h6><p>2023-03-17</p></div></div><div class="level-item is-narrow"><div><h6>Licensed under</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2023/03/17/Codeforces-Edu-Round-Notes/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Codeforces-Edu-Round-Notes</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2022/03/20/hello-world/"><span class="level-item">Hello World</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">Comments</h3><div id="disqus_thread"><noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div><script>var disqus_config = function () {
