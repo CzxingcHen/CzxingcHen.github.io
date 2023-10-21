@@ -11387,8 +11387,6 @@ figure.highlight .section {
     right: 0;
     bottom: 0;
     z-index: 100;
-    max-height: calc(100vh - 22px);
-    overflow-y: scroll;
   }
   .widget.card#toc .card-content {
     padding: 0;
@@ -11412,6 +11410,10 @@ figure.highlight .section {
   #toc-mask.is-active {
     display: block;
   }
+}
+#toc {
+  max-height: calc(100vh - 22px);
+  overflow-y: scroll;
 }
 .donate {
   position: relative;
